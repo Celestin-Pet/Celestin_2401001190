@@ -6,15 +6,24 @@
     <title>java</title>
 </head>
 <body>
-    <h1>its morning session </h1>
+    <h1 id="hello" >its morning session </h1>
+    <h2>now now </h2>
     <script>
-        function learn(){
-            document.querySelector("h1").innerHTML = "welcome to the evenning session";
-        }         
-        
+       
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelector("select").onchange = function(){
+                document.querySelector("#hello").style.color = this.value;
+            }                
+            });
+           
     </script>
 
-<button onclick="learn()">click 2</button>
-<button>testing</button>
+
+<select>
+    <option value="green"> green</option>
+    <option value="yellow"> yelo</option>
+    <option value="blue"> blue</option>
+</select>
+
 </body>
 </html>
